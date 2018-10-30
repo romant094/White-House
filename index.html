@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>РитмРемонт</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/temp.css">
+</head>
+
+<body id="top">
+    <header class="header">
+        <div class="container container--header">
+            <div class="header__logo">
+                <a href="/"><img src="image/logo.png" alt="РитмРемонт"></a>
+            </div>
+
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#services">Наше предложение</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#clients">Отзывы клиентов</a></li>
+                    <li><a href="#map">Контакты</a></li>
+                </ul>
+
+                <span class="header__menu-mobile" id="mobile-menu-open"><i class="fas fa-bars"></i></span>
+            </nav>
+
+            <div class="header__callback">
+                <a href="javascript:void(0)" class="btn btn--transparent btn--icon" onclick="sfOpen();"><i class="fas fa-phone flip--horizontal"></i> Позвоните мне</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="modern">
+            <div class="modern__background">
+                <div class="container flex flex-column flex-align-center">
+                    <h1>Современный ремонт <br>в вашей квартире</h1>
+                    <span>Время работы 9:00 - 18:00 <br>
+                        Тел. <a href="tel:+79066697909">8 906 669 79 09</a>
+                    </span>
+                    <a href="#" class="btn btn--blue" onclick="sfOpen();">Заказать проект</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages" id="advantages">
+            <div class="container">
+                <div class="headline-wrap">
+                    <h2>Наши преимущества</h2>
+                </div>
+                <div class="row wrap center">
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image experience"></span>
+                        <div class="advantages__one-text">
+                            <h3>Опыт</h3>
+                            <p>Сделали более 200 <br>успешных проектов</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image measure"></span>
+                        <div class="advantages__one-text">
+                            <h3>Масштабы</h3>
+                            <p>Выезжаем в любую <br>точку области</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image clarity"></span>
+                        <div class="advantages__one-text">
+                            <h3>Прозрачность</h3>
+                            <p>Никаких сюрпризов <br>в конце работы</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image benefit"></span>
+                        <div class="advantages__one-text">
+                            <h3>Польза</h3>
+                            <p>Mы всегда воплощаем <br>желания клиентов</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image result"></span>
+                        <div class="advantages__one-text">
+                            <h3>Результат</h3>
+                            <p>Мы не говорим <br>мы делаем</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image outline"></span>
+                        <div class="advantages__one-text">
+                            <h3>Смета</h3>
+                            <p>Вы будете знать <br>точную стоимость</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container container--wide">
+                <div class="headline-wrap">
+                    <h2>Наши услуги</h2>
+                </div>
+                <h3 class="services__outer col">Бесплатный замер и составление сметы</h3>
+
+                <div class="row wrap center with-gutter">
+                    <div class="col services__one services__one--electricity">
+                        <h3>Электромонтажные работы</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--plumbing">
+                        <h3>Сантехнические работы</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--painting">
+                        <h3>Малярные работы</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--decoration">
+                        <h3>Внутренняя отделка</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--design">
+                        <h3>Услуги дизайнера</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feedback">
+            <div class="container flex">
+                <div class="feedback__content">
+                    <h3>Оставьте заявку на бесплатный расчет стоимости ремонта</h3>
+                    <form class="target-form" action="mail.php" method="post">
+                        <div class="target-form-content row center">
+                            <input type="text" placeholder="Имя" name="name" required>
+                            <input type="text" placeholder="Контактный телефон" name="phone" required>
+                            <input class="btn btn--blue" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                    <p class="feedback__content-note">*Ваши данные не будут переданы третьим лицам. И мы не спамим</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container flex flex-column flex-align-center">
+                <div class="headline-wrap">
+                    <h2>Портфолио</h2>
+                </div>
+
+                <div class="portfolio__development">
+                    <p>В настоящее время мы работаем над наполнением данного раздела.</p>
+                    <p>Приносим извинения за временные неудобства!</p>
+                    <p>А пока посмотрите, <a href="#clients">что говорят о нас клиенты</a>...</p>
+                    <p class="portfolio__development-regards">С уважением, <br>Компания РитмРемонт</p>
+                </div>
+
+                <div class="portfolio__content row wrap center disabled">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="1">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="2">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="3">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="4">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="5">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="6">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="7">
+                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="8">
+                </div>
+
+                <a href="#" class="btn btn--blue disabled" onclick="sfOpen();">Хочу также!</a>
+            </div>
+        </section>
+
+        <section class="clients" id="clients">
+            <div class="container">
+                <div class="headline-wrap">
+                    <h2>Что говорят наши клиенты</h2>
+                </div>
+                <div class="slider">
+                    <div class="peppermint" id="peppermint">
+                        <div class="clients__block row">
+                            <img src="image/client-photo.png" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br><a href="#">Татьяна Иванова <span><i class="fab fa-vk"></i></span></a></p>
+                        </div>
+                        <div class="clients__block row">
+                            <img src="image/client-photo.png" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br><a href="#">Татьяна Иванова <span><i class="fab fa-vk"></i></span></a></p>
+                        </div>
+                        <div class="clients__block row">
+                            <img src="image/client-photo.png" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br><a href="#">Татьяна Иванова <span><i class="fab fa-vk"></i></span></a></p>
+                        </div>
+                    </div>
+
+                    <a class="slider__nav" href="javascript:void()" id="peppermint-left"></a>
+
+                    <a class="slider__nav slider__nav--right flip--horizontal" href="javascript:void()" id="peppermint-right"></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="steps">
+            <div class="container">
+                <div class="headline-wrap">
+                    <h2>Схема работы</h2>
+                </div>
+
+                <div class="steps__content row wrap space-between">
+                    <div class="steps__content-step step-one">
+                        <h3>Звонок</h3>
+                        <p>Мы созваниваемся <br>и обсуждаем подробности</p>
+                    </div>
+                    <div class="steps__content-step step-two">
+                        <h3>Встреча</h3>
+                        <p>В удобное для Вас <br>время приезжаем на объект</p>
+                    </div>
+                    <div class="steps__content-step step-three">
+                        <h3>Замер</h3>
+                        <p>Производим <br>бесплатный замер</p>
+                    </div>
+                    <div class="steps__content-step step-four">
+                        <h3>Смета</h3>
+                        <p>Составляем <br>подробную смету</p>
+                    </div>
+                    <div class="steps__content-step step-five">
+                        <h3>Договор</h3>
+                        <p>Заключаем <br>понятный договор</p>
+                    </div>
+                    <div class="steps__content-step step-six">
+                        <h3>Работы</h3>
+                        <p>Выполняем все <br>необходимые работы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions">
+            <div class="container">
+                <div class="questions__content">
+                    <h3>Остались вопросы?</h3>
+                    <p>Заполните заявку, и мы Вам перезвоним.</p>
+                    <form class="target-form" action="mail.php" method="post">
+                        <div class="target-form-content row center">
+                            <input type="text" placeholder="Имя" name="name" required>
+                            <input type="text" placeholder="Контактный телефон" name="phone" required>
+                            <input class="btn btn--blue" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map" id="map">
+            <script src="js/yandex.map.js"></script>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content row space-between">
+                    <div class="col-1-of-3 col col--left">
+                        <a href="/"><img src="image/logo-light.png" alt="РитмРемонт"></a>
+                        <p>ИНН 673109486787</p>
+                        <p>ОГРН 315673300008128</p>
+                    </div>
+
+                    <div class="col-2-of-4 col col--mid">
+                        <p>Мы находимся по адресу: г. Смоленск, ул. Трамвайный проезд, д. 2 <br>и работаем с 9:00 до 18:00. <br>Ждем Вас в гости!</p>
+
+                        <p class="phone">Телефон <a href="tel:+79066697909">8 906 669 79 09</a></p>
+
+                        <div class="footer__socials">
+                            <a href="https://vk.com/club126218134"><i class="fab fa-vk"></i></a>
+                            <a href="https://www.instagram.com/ritmremont/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:info@rr67.ru"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3 col col--right">
+                        <p>Остались вопросы? <br>Звоните!</p>
+                        <a class="btn btn--transparent btn--icon btn--white" href="tel:+79066697909"><i class="fas fa-phone flip--horizontal"></i> 8 906 669 79 09</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div class="mobile-menu animated disabled" id="mobile-menu">
+        <div class="mobile-menu-wrap">
+            <ul>
+                <li><a class="mobile-menu-link" href="#advantages">Преимущества</a></li>
+                <li><a class="mobile-menu-link" href="#services">Наше предложение</a></li>
+                <li><a class="mobile-menu-link" href="#portfolio">Портфолио</a></li>
+                <li><a class="mobile-menu-link" href="#clients">Отзывы клиентов</a></li>
+                <li><a class="mobile-menu-link" href="#map">Контакты</a></li>
+            </ul>
+
+            <span class="mobile-menu-close" id="mobile-menu-close"><i class="fas fa-times"></i></span>
+        </div>
+    </div>
+
+    <div class="sendform disabled" id="sendform">
+        <div class="sendform__wrap animated bounceInDown">
+            <span id="sendform-close"><i class="fas fa-times"></i></span>
+            <h3>Оставьте заявку,<br> и мы вам перезвоним</h3>
+            <form action="mail.php" method="post">
+                <label>
+                    <span>Имя</span>
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    <span>Телефон</span>
+                    <input type="text" name="phone" required>
+                </label>
+                <input type="submit" class="btn btn--blue" value="Заказать проект">
+            </form>
+        </div>
+    </div>
+
+    <div class="go-top-wrap animate" id="go-top">
+        <a class="go-top" href="#top"></a>
+    </div>
+
+    <script src="js/peppermint.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/scrolling.js"></script>
+    <script src="js/top-button.js"></script>
+</body>
+
+</html>

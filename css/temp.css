@@ -1,0 +1,35 @@
+.portfolio__development {
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    box-shadow: 2px 3px 7px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    padding: 40px 70px;
+}
+
+.portfolio__development p a {
+    text-decoration: underline;
+}
+
+.portfolio__development p a:hover {
+    color: #777;
+}
+
+.portfolio__development .portfolio__development-regards {
+    text-align: right;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+
+@media screen and (max-width:719px) {
+    .portfolio__development {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .portfolio__development p:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

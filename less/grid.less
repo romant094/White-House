@@ -1,0 +1,121 @@
+/* settings */
+
+@col-padding: 16px;
+@row-margin-left-right: 32px;
+@row-margin-top-bottom: 16px;
+@gutter: 18px;
+@row-width-default: 100%;
+@row-justify-default: flex-start;
+@box-sizing-default: border-box;
+
+/* row */
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: @row-justify-default;
+}
+
+.row.margin-tb {
+    margin-bottom: @row-margin-top-bottom;
+    margin-top: @row-margin-top-bottom;
+}
+
+.row.margin-lr {
+    margin-right: @row-margin-left-right;
+    margin-left: @row-margin-left-right;
+    width: calc(100% - @row-margin-left-right * 2);
+}
+
+.with-gutter .col {
+    margin: 0 @gutter;
+}
+
+.with-gutter .col:first-of-type {
+    margin-left: 0;
+}
+
+.with-gutter .col:last-of-type {
+    margin-right: 0;
+}
+
+.row.space-between {
+    justify-content: space-between;
+}
+
+.row.space-around {
+    justify-content: space-around;
+}
+
+.row.center {
+    justify-content: center;
+}
+
+.row.end {
+    justify-content: flex-end;
+}
+
+.row.evenly {
+    justify-content: space-evenly;
+}
+
+.row.vertical-start {
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.row.vertical-end {
+    -ms-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.row.vertical-center {
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.row.vertical-stretch {
+    -ms-align-items: stretch;
+    align-items: stretch;
+}
+
+.row.wrap {
+    flex-wrap: wrap;
+}
+
+.row.nowrap {
+    flex-wrap: nowrap;
+}
+
+/* column */
+.col {
+    box-sizing: @box-sizing-default;
+}
+
+.col.fill {
+    flex-grow: 1;
+}
+
+.col.padding {
+    padding: @col-padding;
+}
+
+.col-1-of-2,
+.col-2-of-4 {
+    width: 50%;
+}
+
+.col-1-of-3 {
+    width: 33.3%;
+}
+
+.col-2-of-3 {
+    width: 66.6%;
+}
+
+.col-1-of-4 {
+    width: 25%;
+}
+
+.col-3-of-4 {
+    width: 75%;
+}
