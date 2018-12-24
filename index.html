@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>РитмРемонт</title>
+    <title>White House</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -14,24 +14,37 @@
 <body id="top">
     <header class="header">
         <div class="container container--header">
-            <div class="header__logo">
-                <a href="/"><img src="image/logo.png" alt="РитмРемонт"></a>
+            <div class="header--top">
+                <div class="header__city">
+                    Ваш город: <span id="city">Санкт-Петербург</span>
+                    <div class="choose-city display-none animated fadeIn">
+                        <ul>
+                            <li data-city="moscow">Москва</li>
+                            <li data-city="spb">Санкт-Петербург</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <nav class="header__menu">
-                <ul>
-                    <li><a href="#advantages">Преимущества</a></li>
-                    <li><a href="#services">Наше предложение</a></li>
-                    <li><a href="#portfolio">Портфолио</a></li>
-                    <li><a href="#clients">Отзывы клиентов</a></li>
-                    <li><a href="#map">Контакты</a></li>
-                </ul>
-
-                <span class="header__menu-mobile" id="mobile-menu-open"><i class="fas fa-bars"></i></span>
-            </nav>
-
-            <div class="header__callback">
-                <a href="javascript:void(0)" class="btn btn--transparent btn--icon" onclick="sfOpen();"><i class="fas fa-phone flip--horizontal"></i> Позвоните мне</a>
+            <div class="header--bottom">
+                <div class="header__logo">
+                    <a href="/"><img src="image/logo.png" alt="White House"></a>
+                </div>
+        
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Расчет стоимости</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+    
+                    <span class="header__menu-mobile" id="mobile-menu-open"><i class="fas fa-bars"></i></span>
+                </nav>
+                
+                <div class="header__callback">
+                    <a href="javascript:void(0)" class="btn btn--transparent btn--icon btn--uppercase" onclick="sfOpen();"><i class="fas fa-phone flip--horizontal fa-circle"></i> Позвоните нам</a>
+                </div>                    
             </div>
         </div>
     </header>
@@ -41,10 +54,10 @@
             <div class="modern__background">
                 <div class="container flex flex-column flex-align-center">
                     <h1>Современный ремонт <br>в вашей квартире</h1>
-                    <span>Время работы 9:00 - 18:00 <br>
-                        Тел. <a href="tel:+79066697909">8 906 669 79 09</a>
+                    <span>Время работы 9:00 - 19:00 <br>
+                        Тел. <a href="tel:+79517116321"> 8 951 711 63 21</a>
                     </span>
-                    <a href="#" class="btn btn--blue" onclick="sfOpen();">Заказать проект</a>
+                    <a href="#" class="btn btn--green btn--gradient" onclick="sfOpen();">Заказать проект</a>
                 </div>
             </div>
         </section>
@@ -161,7 +174,7 @@
                         <div class="target-form-content row center">
                             <input type="text" placeholder="Имя" name="name" required>
                             <input type="text" placeholder="Контактный телефон" name="phone" required>
-                            <input class="btn btn--blue" type="submit" value="Отправить">
+                            <input class="btn btn--green" type="submit" value="Отправить">
                         </div>
                     </form>
                     <p class="feedback__content-note">*Ваши данные не будут переданы третьим лицам. И мы не спамим</p>
@@ -175,25 +188,24 @@
                     <h2>Портфолио</h2>
                 </div>
 
-                <div class="portfolio__development">
+                <div class="portfolio__development disabled">
                     <p>В настоящее время мы работаем над наполнением данного раздела.</p>
                     <p>Приносим извинения за временные неудобства!</p>
                     <p>А пока посмотрите, <a href="#clients">что говорят о нас клиенты</a>...</p>
                     <p class="portfolio__development-regards">С уважением, <br>Компания РитмРемонт</p>
                 </div>
 
-                <div class="portfolio__content row wrap center disabled">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="1">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="2">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="3">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="4">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="5">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="6">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="7">
-                    <img class="col portfolio__content-single" src="image/portfolio-img.png" alt="8">
+                <div class="portfolio__content row wrap center">
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img1.png" alt="1"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img2.png" alt="2"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img3.png" alt="3"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img1.png" alt="4"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img3.png" alt="5"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img1.png" alt="6"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img2.png" alt="7"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-img3.png" alt="8"></div>
                 </div>
-
-                <a href="#" class="btn btn--blue disabled" onclick="sfOpen();">Хочу также!</a>
+                <a href="#" class="btn btn--green" onclick="sfOpen();">Хочу также!</a>
             </div>
         </section>
 
@@ -264,12 +276,12 @@
             <div class="container">
                 <div class="questions__content">
                     <h3>Остались вопросы?</h3>
-                    <p>Заполните заявку, и мы Вам перезвоним.</p>
+                    <h3>Заполните заявку, и мы Вам перезвоним.</h3>
                     <form class="target-form" action="mail.php" method="post">
                         <div class="target-form-content row center">
                             <input type="text" placeholder="Имя" name="name" required>
                             <input type="text" placeholder="Контактный телефон" name="phone" required>
-                            <input class="btn btn--blue" type="submit" value="Отправить">
+                            <input class="btn btn--green" type="submit" value="Отправить">
                         </div>
                     </form>
                 </div>
@@ -280,44 +292,52 @@
             <script src="js/yandex.map.js"></script>
         </section>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__content row space-between">
-                    <div class="col-1-of-3 col col--left">
-                        <a href="/"><img src="image/logo-light.png" alt="РитмРемонт"></a>
-                        <p>ИНН 673109486787</p>
-                        <p>ОГРН 315673300008128</p>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content row space-between">
+                <div class="col-1-of-3 col col--left">
+                    <a href="/"><img src="image/logo-light.png" alt="White House"></a>
+                </div>
+                
+                <div class="col-2-of-4 col col--mid">
+                    <nav class="footer__menu">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Расчет стоимости</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__adress">
+                        <p class="adress"><i class="fas fa-map-marker-alt fa-circle--footer"></i>г. Москва, ул. Молодежная 61 <br>
+                            Работаем с 9:00 до 19:00. </p>
+                        <p class="phone"><i class="fas fa-phone flip--horizontal fa-circle--footer"></i><a href="tel:+79517116321"> 8 951 711 63 21</a></p>
                     </div>
 
-                    <div class="col-2-of-4 col col--mid">
-                        <p>Мы находимся по адресу: г. Смоленск, ул. Трамвайный проезд, д. 2 <br>и работаем с 9:00 до 18:00. <br>Ждем Вас в гости!</p>
-
-                        <p class="phone">Телефон <a href="tel:+79066697909">8 906 669 79 09</a></p>
-
-                        <div class="footer__socials">
+                    <div class="footer__socials">
+                        <p>С другой стороны постоянное информационно пропагандистское обеспечение нашей деятельности</p>
+                        <div>
                             <a href="https://vk.com/club126218134"><i class="fab fa-vk"></i></a>
                             <a href="https://www.instagram.com/ritmremont/"><i class="fab fa-instagram"></i></a>
-                            <a href="mailto:info@rr67.ru"><i class="fas fa-envelope"></i></a>
+                            <a href="mailto:info@wh77.ru"><i class="fas fa-envelope"></i></a>
                         </div>
-                    </div>
-
-                    <div class="col-1-of-3 col col--right">
-                        <p>Остались вопросы? <br>Звоните!</p>
-                        <a class="btn btn--transparent btn--icon btn--white" href="tel:+79066697909"><i class="fas fa-phone flip--horizontal"></i> 8 906 669 79 09</a>
+                        
                     </div>
                 </div>
             </div>
-        </footer>
-    </main>
-
+        </div>
+    </footer>
     <div class="mobile-menu animated disabled" id="mobile-menu">
         <div class="mobile-menu-wrap">
             <ul>
-                <li><a class="mobile-menu-link" href="#advantages">Преимущества</a></li>
-                <li><a class="mobile-menu-link" href="#services">Наше предложение</a></li>
-                <li><a class="mobile-menu-link" href="#portfolio">Портфолио</a></li>
-                <li><a class="mobile-menu-link" href="#clients">Отзывы клиентов</a></li>
-                <li><a class="mobile-menu-link" href="#map">Контакты</a></li>
+                <li><a class="mobile-menu-link" href="index.html">Главная</a></li>
+                <li><a class="mobile-menu-link" href="#">Услуги</a></li>
+                <li><a class="mobile-menu-link" href="#">Расчет стоимости</a></li>
+                <li><a class="mobile-menu-link" href="news.html">Новости</a></li>
+                <li><a class="mobile-menu-link" href="#">Контакты</a></li>
             </ul>
 
             <span class="mobile-menu-close" id="mobile-menu-close"><i class="fas fa-times"></i></span>
@@ -338,7 +358,7 @@
                     <span>Телефон</span>
                     <input type="text" name="phone" required>
                 </label>
-                <input type="submit" class="btn btn--blue" value="Заказать проект">
+                <input type="submit" class="btn btn--green" value="Заказать проект">
             </form>
         </div>
     </div>
@@ -352,6 +372,8 @@
     <script src="js/modals.js"></script>
     <script src="js/scrolling.js"></script>
     <script src="js/top-button.js"></script>
+    <script src="js/js-cookie.js"></script>
+    <script src="js/geocitycookie.js"></script>
 </body>
 
 </html>
