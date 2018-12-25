@@ -593,13 +593,14 @@ h3 {
   width: 100%;
 }
 .header--top{
-/* margin-top: 20px; */
 display: flex;
+justify-content: space-between;
 width: 100%;
 margin-bottom: 30px;
 }
-.header--top .header__city{
-  font-size: 20px;
+.header--top .header__phone a{
+  color: #0b764f;
+  font-weight: 400;
 }
 .header--top .header__city span{
   cursor: pointer;
