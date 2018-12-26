@@ -1,8 +1,58 @@
 document.addEventListener('DOMContentLoaded', function () {
     'use strict';
 
-    let city,
-        div = document.createElement('div'),
+    let city = Cookies.get('wh_city'),
+        cityChoose = document.querySelector('.choose-city'),
+        citySpan = document.querySelector('#city'),
+        cityCheck = cityChoose.querySelectorAll('li'),
+        cityList = [],
+        addressSpan = document.querySelector('#address span'),
+        address = {
+            MOW: 'г. Химки, ул. Молодежная 61',
+            SPE: 'пос. Кудрово, ул. Английская 5'
+        };
+
+    cityCheck.forEach((item) => {
+        cityList.push(item.getAttribute('data-city'));
+    });
+
+    function setCity() {
+        let index = cityList.indexOf(city);
+
+        if (index != -1) {
+            citySpan.textContent = cityCheck[index].textContent;
+        } else {
+            citySpan.textContent = cityCheck[0].textContent;
+        }
+
+        for (let prop in address) {
+            if (city == prop) {
+                addressSpan.textContent = address[prop];
+            }
+        }
+    }
+
+    function changeCity() {
+        cityCheck.forEach((item) => {
+            item.addEventListener('click', function () {
+                city = this.getAttribute('data-city');
+                setCookie('wh_city', city, 30);
+                setCity();
+                cityChoose.classList.add('display-none');
+            });
+        });
+    }
+    changeCity();
+
+    function setCookie(cookieName, cookieValue, expires) {
+        let today = new Date(),
+            cookiesExpireDay = new Date();
+
+        cookiesExpireDay.setDate(today.getDate() + expires);
+        document.cookie = `${cookieName}=${cookieValue}; expires=${cookiesExpireDay}; path=/`;
+    }
+
+    let div = document.createElement('div'),
         span = document.createElement('span'),
         cont = document.createElement('div');
 
@@ -23,24 +73,18 @@ document.addEventListener('DOMContentLoaded', function () {
         cookiesBox.classList.add('display-none');
     });
 
-    let cityChoose = document.querySelector('.choose-city'),
-        citySpan = document.querySelector('#city');
-
     citySpan.addEventListener('click', () => {
         cityChoose.classList.remove('display-none');
     });
 
-    document.addEventListener('click', (e) => {
-        if (!cityChoose.classList.contains('display-none')) {
-            console.log(e.target);
-            if (e.target != cityChoose) {
-                cityChoose.classList.add('display-none');
-            }
-        }
+    let cityChooseClose = cityChoose.querySelector('.choose-city__close');
+
+    cityChooseClose.addEventListener('click', () => {
+        cityChoose.classList.add('display-none');
     });
 
-    if (Cookies.get('wh_city')) {
-        city = Cookies.get('wh_city');
+    if (city != undefined) {
+        setCity();
     } else {
         fetch('http://api.ipapi.com/check?access_key=6248620991f2f88b241e253fb9f5bcb6&format=1')
             .then(
@@ -51,8 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         return;
                     }
                     response.json().then(function (data) {
-                        Cookies.set('wh_city', data.city, { expires: 30 });
-                        city = data.city;
+                        setCookie('wh_city', data.region_code, 30);
+                        city = data.region_code;
+                        setCity();
                         cookiesBox.classList.remove('display-none');
                     });
                 }
@@ -61,7 +106,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('Fetch Error :-S', err);
             });
     }
-    console.log(city);
-
-
 });
