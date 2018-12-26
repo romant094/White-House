@@ -617,6 +617,12 @@ top: 55px;
 -moz-box-shadow: 0px 0px 10px 0px rgba(119,208,149,0.75);
 box-shadow: 0px 0px 10px 0px rgba(119,208,149,0.75);
 }
+.header--top .header__city .choose-city .choose-city__close{
+position: absolute;
+top: 2px;
+right: 7px;
+border: none;
+}
 .header--top .header__city .choose-city ul li{
   box-sizing: border-box;
   text-align: center;

@@ -4,6 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>White House</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -16,11 +17,12 @@
         <div class="container container--header">
             <div class="header--top">
                 <div class="header__city">
-                    Ваш город: <span id="city">Санкт-Петербург</span>
+                    Ваш город: <span id="city">Выбрать</span>
                     <div class="choose-city display-none animated fadeIn">
+                        <span class="choose-city__close">x</span>
                         <ul>
-                            <li data-city="moscow">Москва</li>
-                            <li data-city="spb">Санкт-Петербург</li>
+                            <li data-city="MOW">Москва</li>
+                            <li data-city="SPE">Санкт-Петербург</li>
                         </ul>
                     </div>
                 </div>
@@ -312,8 +314,8 @@
                         </ul>
                     </nav>
                     <div class="footer__adress">
-                        <p class="adress"><i class="fas fa-map-marker-alt fa-circle--footer"></i>г. Москва, ул. Молодежная 61 <br>
-                            Работаем с 9:00 до 19:00. </p>
+                        <p class="adress" id="address"><i class="fas fa-map-marker-alt fa-circle--footer"></i><span>г. Москва, ул. Молодежная 61</span><br>
+                            Работаем с 9:00 до 19:00.</p>
                         <p class="phone"><i class="fas fa-phone flip--horizontal fa-circle--footer"></i><a href="tel:+79517116321"> 8 951 711 63 21</a></p>
                     </div>
 
