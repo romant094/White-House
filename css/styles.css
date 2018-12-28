@@ -582,6 +582,9 @@ h3 {
 .display-none{
   display: none;
 }
+.overflow-hidden{
+  overflow: hidden;
+}
 .header {
   padding: 25px 0;
   background-color: #f0faf3;
@@ -867,6 +870,7 @@ border: none;
 .portfolio__content-single img {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 .portfolio .btn {
   display: inline-block;
