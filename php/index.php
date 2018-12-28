@@ -25,7 +25,7 @@ $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
 JHtml::_('script', 'template.js', array('version' => 'auto', 'relative' => true));
 
 // Add Stylesheets
-JHtml::_('stylesheet', 'styles.css', array('version' => 'auto', 'relative' => true));
+JHtml::_('stylesheet', 'styles.min.css', array('version' => 'auto', 'relative' => true));
 JHtml::_('stylesheet', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css', array('version' => 'auto', 'relative' => false));
 JHtml::_('stylesheet', 'animate.min.css', array('version' => 'auto', 'relative' => true));
 JHtml::_('stylesheet', 'temp.css', array('version' => 'auto', 'relative' => true));
@@ -51,17 +51,19 @@ if (isset($params['phone'])) {
 	<jdoc:include type="head" />
     <meta name="yandex-verification" content="c359ee2fea2ddb97" />
     <meta name="google-site-verification" content="gO4KBSFyAOFEXginUp0zgzfCt9N2hkOvPr_D-HjqGKY" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 <body id="top">
     <header class="header">
         <div class="container container--header">
             <div class="header--top">
                 <div class="header__city">
-                    Ваш город: <span id="city">Санкт-Петербург</span>
+                    Ваш город: <span id="city">Выбрать</span>
                     <div class="choose-city display-none animated fadeIn">
+                    <span class="choose-city__close">x</span>
                         <ul>
-                            <li data-city="moscow">Москва</li>
-                            <li data-city="spb">Санкт-Петербург</li>
+                            <li data-city="MOW">Москва</li>
+                            <li data-city="SPE">Санкт-Петербург</li>
                         </ul>
                     </div>
                 </div>
@@ -251,14 +253,14 @@ if (isset($params['phone'])) {
                 </div>
 
                 <div class="portfolio__content row wrap center">
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img1.png" alt="1"></div>
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img2.png" alt="2"></div>
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img3.png" alt="3"></div>
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img1.png" alt="4"></div>
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img3.png" alt="5"></div>
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img1.png" alt="6"></div>
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img2.png" alt="7"></div>
-                    <div class="col portfolio__content-single" ><img src="image/portfolio-img3.png" alt="8"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-1.jpeg" alt="1"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-2.jpeg" alt="2"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-3.jpeg" alt="3"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-4.jpeg" alt="4"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-5.jpeg" alt="5"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-6.jpeg" alt="6"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-7.jpeg" alt="7"></div>
+                    <div class="col portfolio__content-single" ><img src="image/portfolio-8.jpeg" alt="8"></div>
                 </div>
                 <a href="#" class="btn btn--green" onclick="sfOpen();">Хочу также!</a>
             </div>
@@ -339,8 +341,7 @@ if (isset($params['phone'])) {
                     </nav>
                     <div class="footer__adress">
                       <?php if (isset($params['address']) || isset($params['time-footer'])) { ?>
-                        <p class="adress">
-                        <?php if (isset($params['address'])) { ?><i class="fas fa-map-marker-alt fa-circle--footer"></i><?= $params['address'] ?> <br><?php } ?>
+                        <p class="adress" id="address"><i class="fas fa-map-marker-alt fa-circle--footer"></i><span>г. Москва, ул. Молодежная 61</span><br>
                         <?php if (isset($params['time-footer'])) { ?>
                           Работаем <?= $params['time-footer'] ?>. </p>
                         <?php } ?>
@@ -408,6 +409,14 @@ if (isset($params['phone'])) {
     <script src="<?= JURI::base(true).'/templates/'.$app->getTemplate().'/' ?>js/modals.js"></script>
     <script src="<?= JURI::base(true).'/templates/'.$app->getTemplate().'/' ?>js/scrolling.js"></script>
     <script src="<?= JURI::base(true).'/templates/'.$app->getTemplate().'/' ?>js/top-button.js"></script>
+    <script src="<?= JURI::base(true).'/templates/'.$app->getTemplate().'/' ?>js/js-cookie.js"></script>
+    <script src="<?= JURI::base(true).'/templates/'.$app->getTemplate().'/' ?>js/geocitycookie.js"></script>
+    <?php
+        $app = JFactory::getApplication();
+        $menu = $app->getMenu();
+        if ($menu->getActive() == $menu->getDefault()) { ?>
+    <script src="<?= JURI::base(true).'/templates/'.$app->getTemplate().'/' ?>js/imgpopup.js"></script>
+    <?php } ?>
     <!-- Yandex.Metrika counter -->
         <script >
             (function (d, w, c) {
