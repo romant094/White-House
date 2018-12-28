@@ -725,6 +725,51 @@ border: none;
 .modern__background a {
   color: #ffffff;
 }
+.height-auto{
+  height: auto !important;
+}
+.about{
+margin-bottom: 80px;
+}
+.about .about__content{
+line-height: 26px;
+}
+.about .about__content .about__content-spoiler{
+height: 50px;
+overflow: hidden;
+}
+.about .about__content .about__content-spoiler .trigger-wrap{
+  margin: 10px 0;
+}
+.about .about__content a{
+color: #77d095;
+}
+.about .about__content a:hover{
+text-decoration: underline;
+}
+.about .about__content p:not(:first-child){ 
+margin-bottom: 10px;
+}
+.about .about__content h6{ 
+font-weight: 700;
+font-size: 18px;
+margin-bottom: 10px;
+}
+.about .about__content ul{ 
+list-style-type: disc;
+}
+.about .about__content ol{ 
+list-style-type: decimal;
+}
+.about .about__content ol,
+.about .about__content ul{ 
+padding-left: 18px;
+}
+.about .about__content ol li,
+.about .about__content ul li{ 
+padding-left: 16px;
+margin-bottom: 10px;
+}
 .advantages {
   margin-bottom: 80px;
 }
