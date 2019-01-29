@@ -580,10 +580,10 @@ h3 {
   letter-spacing: 1.2px;
 }
 .display-none{
-  display: none;
+  display: none !important;
 }
 .overflow-hidden{
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .header {
   padding: 25px 0;
@@ -1252,7 +1252,7 @@ margin-bottom: 10px;
   max-width: 282px;
   position: relative;
 }
-.sendform__wrap #sendform-close {
+.sendform__wrap .sendform-close {
   position: absolute;
   top: 20px;
   right: 20px;

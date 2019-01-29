@@ -1,43 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>White House</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/temp.css">
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>White House</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/temp.css">
+</head>
 
-    <body id="top">
-        <header class="header">
-            <div class="container container--header">
-                <div class="header--top">
-                    <div class="header__city">
-                        Ваш город:
-                        <span id="city">Выбрать</span>
-                        <div class="choose-city display-none animated fadeIn">
-                            <span class="choose-city__close">x</span>
-                            <ul>
-                                <li data-city="MOW">Москва</li>
-                                <li data-city="SPE">Санкт-Петербург</li>
-                            </ul>
+<body id="top">
+    <header class="header">
+        <div class="container container--header">
+            <div class="header--top">
+                <div class="header__city">
+                    Ваш город:
+                    <span id="city">Выбрать</span>
+                    <div class="choose-city display-none animated fadeIn">
+                        <span class="choose-city__close">x</span>
+                        <ul>
+                            <li data-city="MOW">Москва</li>
+                            <li data-city="SPE">Санкт-Петербург</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header--bottom">
+                <div class="header__logo">
+                    <a href="/"><img src="image/logo.png" alt="White House"></a>
+                </div>
+
+                <nav class="header__menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#">Расчет стоимости</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <span class="header__menu-mobile" id="mobile-menu-open">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </nav>
+
+                <div class="header__callback">
+                    <a href="tel:+79517116321" class="btn btn--transparent btn--icon btn--uppercase">
+                        <i class="fas fa-phone flip--horizontal fa-circle"></i>8 951 711 63 21</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="modern">
+            <div class="modern__background">
+                <div class="container flex flex-column flex-align-center">
+                    <h1>Современный ремонт
+                        <br>в вашей квартире</h1>
+                    <span>Время работы 9:00 - 19:00
+                        <br>
+                        Тел.
+                        <a href="tel:+79517116321">
+                            8 951 711 63 21</a>
+                    </span>
+                    <a href="#" class="btn btn--green btn--gradient" onclick="sfOpen();">Заказать проект</a>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="headline-wrap">
+                    <h2>О нас</h2>
+                </div>
+                <div class="about__content">
+                    <p>
+                        В современном мире многие строительные компании и фирмы по преображению
+                        помещений предлагают осуществить ремонт квартир под ключ. В это понятие входит
+                        не только создание визуально красивой отделки стен, потолка и пола, а и
+                        электромонтажные, сантехнические, малярные работы, включая дизайнерское
+                        оформление, как завершающий этап. Целью таких действий есть повышения уровня
+                        прожиточного комфорта и снижение стоимости обслуживания помещения. Что же
+                        подразумевает современный ремонт, какие его этапы и что получает клиент?</p>
+
+                    <div class="about__content-spoiler">
+                        <div class="trigger-wrap">
+                            <a href="#">Подробнее...</a>
+                        </div>
+                        <h6>
+                            Современный ремонт квартиры: с чего начать и на что обратить внимание
+                        </h6>
+                        <p>
+                            Каждый человек, который желает заказать ремонт своей квартиры, хочет получить
+                            безопасные условия, повышенный комфорт и уют, а также максимальное удобство
+                            повседневной жизни. Это будет зависеть от выбранных материалов, их прочности и
+                            долгосрочности использования, качества работы ремонтников, которые будут
+                            заниматься состоянием помещения. Добиться наилучших результатов получиться в
+                            случае:
+                        </p>
+                        <ul>
+                            <li>разработки правильного и профессионального проекта и планировки квартиры;</li>
+                            <li>при строгом следовании проектной документации и выполнении всех правил
+                                монтажного, сантехнического и внутриотделочного ремонта;</li>
+                            <li>при использовании современных высококачественных материалов и
+                                технологического оснащения.</li>
+                        </ul>
+                        <p>
+                            Важным этапом есть выбор компании, которая ответственно отнесется к заказу,
+                            примет во внимание все пожелания клиента и качественно будет выполнять свою
+                            работу. Профессионалы «White House» готовы взяться за современный ремонт любой
+                            сложности, обсудив все нюансы и четко выполняя все очерченные этапы.
+                        </p>
+                        <h6>
+                            Порядок организации ремонта квартир в Москве
+                        </h6>
+                        <p>
+                            Первым этапом, конечно же, будет телефонный разговор при котором будут уточнятся
+                            основные подробности и получении желаемого результата. Консультант будет
+                            задавать наводящие вопросы, чтобы предварительно создать примерную картинку
+                            того, что должно получиться.
+                        </p>
+                        <p>
+                            После детально оговоренных пожеланий по получению конечного результата с
+                            представителем компании, в обязательном порядке на объект выезжает замерщик,
+                            который оценивает помещение и снимает нужные замеры для создания проекта. Обычно
+                            выбирается время, которое будет удобно и клиенту, и компании. Однако, уважающие
+                            себя заведения часто идут на уступки, поэтому договориться о дате и времени
+                            визита можно всегда.
+                        </p>
+                        <p>
+                            Чтобы клиент был спокоен и мог рассчитывать на конкретные денежные вложения для
+                            ремонта своей квартиры, составляется смета расходов. После чего заключается
+                            договор с компанией на определенный период, за который все работы по дому должны
+                            будут быть выполненными. Остается только немного подождать и заехать жить в
+                            квартиру своих фантазий.
+                        </p>
+                        <h6>
+                            Что включает ремонт квартир СПб
+                        </h6>
+                        <p>
+                            Современный ремонт квартиры включает в себя много разных аспектов по проведению
+                            разноплановых работ. Например:
+                        </p>
+                        <ol>
+                            <li>
+                                Проведение подготовительных работ. Они подразумевают очищение помещения от
+                                старых отделок, выравнивание потолков и стен, нанесение черновой стяжки.
+                            </li>
+                            <li>
+                                Создание новой планировки жилого помещения. Это позволит создать максимальный
+                                комфорт и учесть все пожелания.
+                            </li>
+                            <li>
+                                Проведение сантехнических работ. Этот этап есть обязательным, ведь за новым
+                                ремонтом, старые трубопроводы могут подкачать и испортить весь труд. Заново
+                                монтированные трубы, установка радиатора отопления и дополнительной защиты от
+                                возможных протеканий избавит от переживаний и позволит спокойно наслаждаться
+                                жизнью.
+                            </li>
+                            <li>
+                                Разводка электричества. Поскольку современный человек имеет огромное количество
+                                приспособлений, что питаются электроэнергией, то грамотная разводка, правильно
+                                проложенные кабеля и размещение розеток, включателей существенно облегчит бытие.
+                                Поэтому электромонтажные работы в ремонте квартир занимают одно из главных мест.
+                            </li>
+                            <li>
+                                Формирование стяжки и утепление стен, внутренняя отделка квартиры. Этот этап
+                                наиболее обширный и продолжительный. Под чистовой отделкой подразумевается
+                                укладка плитки, окрашивание стен, нанесение штукатурки или оформление обоями,
+                                установка подвесных потолков и проведение других отделочных работ, что придадут
+                                стенам, полу и потолку оконченного вида.
+                            </li>
+                            <li>
+                                Дизайнерские услуги по ремонту квартир проводятся для декорирования помещения в
+                                современном стиле. Часто здесь используется авторский подход при котором
+                                помещение оформляется в одном из известных модных стилей (модерн, классика,
+                                хай-тек и другие).
+                            </li>
+                        </ol>
+                        <p>
+                            Обычно опытные мастера в завершение всех работ подключают кухонную технику,
+                            душевые кабины и другие приборы, чтоб клиент мог зайти в свой дом и начать
+                            пользоваться всем необходимым без лишних хлопот.
+                        </p>
+                        <h6>
+                            Какие преимущества имеет страховка ремонта квартиры
+                        </h6>
+                        <p>
+                            Страховка на время ремонта квартиры дает возможность не переживать о возможных
+                            причиненных неприятностях соседям и обрести уверенность в качестве выполняемых
+                            работ. В случае непредвиденных ситуаций всю материальную сторону вопроса возьмет
+                            на себя страховая компания. В перечень возможных конфузов могут входить:
+                        </p>
+                        <ul>
+                            <li>
+                                нанесение вреда имуществу в результате механического воздействия;
+                            </li>
+                            <li>
+                                повреждение проводки и нарушение правил противопожарной безопасности;
+                            </li>
+                            <li>
+                                затопление или последствия атмосферных явлений;
+                            </li>
+                            <li>
+                                кража имущества.
+                            </li>
+                        </ul>
+                        <p>
+                            Страхование же после проведения ремонтных работ дает возможность возместить
+                            финансовые средства за дорогую обивку и покрытие стен и потолка, при
+                            использовании горючих материалов в ремонте и инженерные коммуникации.
+                        </p>
+                        <p>
+                            Заказать ремонт квартиры и не переживать за некачественные работы можно у
+                            компании «White House». Каждый клиент получает индивидуальный подход, бесплатные
+                            услуги замерщика и выполнение ремонта в оговоренные строки. Мы работаем
+                            качественно на отменный конечный результат. Об этом свидетельствуют наших
+                            клиентов, которые доверили нам свои помещения. Убедитесь сами в нашем
+                            профессионализме и компетентности в мире современного оформления квартир!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages" id="advantages">
+            <div class="container">
+                <div class="headline-wrap">
+                    <h2>Наши преимущества</h2>
+                </div>
+                <div class="row wrap center">
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image experience"></span>
+                        <div class="advantages__one-text">
+                            <h3>Опыт</h3>
+                            <p>Сделали более 200
+                                <br>успешных проектов</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image measure"></span>
+                        <div class="advantages__one-text">
+                            <h3>Масштабы</h3>
+                            <p>Выезжаем в любую
+                                <br>точку области</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image clarity"></span>
+                        <div class="advantages__one-text">
+                            <h3>Прозрачность</h3>
+                            <p>Никаких сюрпризов
+                                <br>в конце работы</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image benefit"></span>
+                        <div class="advantages__one-text">
+                            <h3>Польза</h3>
+                            <p>Mы всегда воплощаем
+                                <br>желания клиентов</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image result"></span>
+                        <div class="advantages__one-text">
+                            <h3>Результат</h3>
+                            <p>Мы не говорим
+                                <br>мы делаем</p>
+                        </div>
+                    </div>
+                    <div class="col col-1-of-3 advantages__one ">
+                        <span class="advantages__one-image outline"></span>
+                        <div class="advantages__one-text">
+                            <h3>Смета</h3>
+                            <p>Вы будете знать
+                                <br>точную стоимость</p>
                         </div>
                     </div>
                 </div>
-                <div class="header--bottom">
-                    <div class="header__logo">
-                        <a href="/"><img src="image/logo.png" alt="White House"></a>
+            </div>
+        </section>
+
+        <section class="services" id="nashi-uslugi">
+            <div class="container container--wide">
+                <div class="headline-wrap">
+                    <h2>Наши услуги</h2>
+                </div>
+                <h3 class="services__outer col">Бесплатный замер и составление сметы</h3>
+
+                <div class="row wrap center with-gutter">
+                    <div class="col services__one services__one--electricity">
+                        <h3>Электромонтажные работы</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--plumbing">
+                        <h3>Сантехнические работы</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--painting">
+                        <h3>Малярные работы</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--decoration">
+                        <h3>Внутренняя отделка</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                    <div class="col services__one services__one--design">
+                        <h3>Услуги дизайнера</h3>
+                        <ul>
+                            <li>Замена и прокладка проводки</li>
+                            <li>Установка светильников</li>
+                            <li>Замена розеток</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feedback">
+            <div class="container flex">
+                <div class="feedback__content">
+                    <h3>Оставьте заявку на бесплатный расчет стоимости ремонта</h3>
+                    <form class="target-form" action="mail.php" method="post">
+                        <div class="target-form-content row center">
+                            <input type="text" placeholder="Имя" name="name" required="required">
+                            <input type="text" placeholder="Контактный телефон" name="phone" required="required">
+                            <input class="btn btn--green" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                    <p class="feedback__content-note">*Ваши данные не будут переданы третьим лицам. И мы не спамим</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container flex flex-column flex-align-center">
+                <div class="headline-wrap">
+                    <h2>Портфолио</h2>
+                </div>
+
+                <div class="portfolio__development disabled">
+                    <p>В настоящее время мы работаем над наполнением данного раздела.</p>
+                    <p>Приносим извинения за временные неудобства!</p>
+                    <p>А пока посмотрите,
+                        <a href="#clients">что говорят о нас клиенты</a>...</p>
+                    <p class="portfolio__development-regards">С уважением,
+                        <br>Компания РитмРемонт</p>
+                </div>
+
+                <div class="portfolio__content row wrap center">
+                    <div class="col portfolio__content-single"><img src="image/portfolio-1.jpeg" alt="1"></div>
+                    <div class="col portfolio__content-single"><img src="image/portfolio-2.jpeg" alt="2"></div>
+                    <div class="col portfolio__content-single"><img src="image/portfolio-3.jpeg" alt="3"></div>
+                    <div class="col portfolio__content-single"><img src="image/portfolio-4.jpeg" alt="4"></div>
+                    <div class="col portfolio__content-single"><img src="image/portfolio-5.jpeg" alt="5"></div>
+                    <div class="col portfolio__content-single"><img src="image/portfolio-6.jpeg" alt="6"></div>
+                    <div class="col portfolio__content-single"><img src="image/portfolio-7.jpeg" alt="7"></div>
+                    <div class="col portfolio__content-single"><img src="image/portfolio-8.jpeg" alt="8"></div>
+                </div>
+                <a href="#" class="btn btn--green" onclick="sfOpen();">Хочу также!</a>
+            </div>
+        </section>
+
+        <section class="clients" id="clients">
+            <div class="container">
+                <div class="headline-wrap">
+                    <h2>Что говорят наши клиенты</h2>
+                </div>
+                <div class="slider">
+                    <div class="peppermint" id="peppermint">
+                        <div class="clients__block row">
+                            <img src="image/client-photo.png" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem
+                                ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum
+                                distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br>
+                                <a href="#">Татьяна Иванова
+                                    <span>
+                                        <i class="fab fa-vk"></i></span></a>
+                            </p>
+                        </div>
+                        <div class="clients__block row">
+                            <img src="image/client-photo.png" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem
+                                ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum
+                                distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br>
+                                <a href="#">Татьяна Иванова
+                                    <span>
+                                        <i class="fab fa-vk"></i></span></a>
+                            </p>
+                        </div>
+                        <div class="clients__block row">
+                            <img src="image/client-photo.png" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem
+                                ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum
+                                distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br>
+                                <a href="#">Татьяна Иванова
+                                    <span>
+                                        <i class="fab fa-vk"></i></span></a>
+                            </p>
+                        </div>
                     </div>
 
-                    <nav class="header__menu">
+                    <a class="slider__nav" href="javascript:void()" id="peppermint-left"></a>
+
+                    <a class="slider__nav slider__nav--right flip--horizontal" href="javascript:void()" id="peppermint-right"></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="steps">
+            <div class="container">
+                <div class="headline-wrap">
+                    <h2>Схема работы</h2>
+                </div>
+
+                <div class="steps__content row wrap space-between">
+                    <div class="steps__content-step step-one">
+                        <h3>Звонок</h3>
+                        <p>Мы созваниваемся
+                            <br>и обсуждаем подробности</p>
+                    </div>
+                    <div class="steps__content-step step-two">
+                        <h3>Встреча</h3>
+                        <p>В удобное для Вас
+                            <br>время приезжаем на объект</p>
+                    </div>
+                    <div class="steps__content-step step-three">
+                        <h3>Замер</h3>
+                        <p>Производим
+                            <br>бесплатный замер</p>
+                    </div>
+                    <div class="steps__content-step step-four">
+                        <h3>Смета</h3>
+                        <p>Составляем
+                            <br>подробную смету</p>
+                    </div>
+                    <div class="steps__content-step step-five">
+                        <h3>Договор</h3>
+                        <p>Заключаем
+                            <br>понятный договор</p>
+                    </div>
+                    <div class="steps__content-step step-six">
+                        <h3>Работы</h3>
+                        <p>Выполняем все
+                            <br>необходимые работы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions">
+            <div class="container">
+                <div class="questions__content">
+                    <h3>Остались вопросы?</h3>
+                    <h3>Заполните заявку, и мы Вам перезвоним.</h3>
+                    <form class="target-form" action="mail.php" method="post">
+                        <div class="target-form-content row center">
+                            <input type="text" placeholder="Имя" name="name" required="required">
+                            <input type="text" placeholder="Контактный телефон" name="phone" required="required">
+                            <input class="btn btn--green" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map" id="kontakty">
+            <script src="js/yandex.map.js"></script>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content row space-between">
+                <div class="col-1-of-3 col col--left">
+                    <a href="/"><img src="image/logo-light.png" alt="White House"></a>
+                </div>
+
+                <div class="col-2-of-4 col col--mid">
+                    <nav class="footer__menu">
                         <ul>
                             <li>
                                 <a href="index.html">Главная</a>
@@ -55,588 +527,124 @@
                                 <a href="#">Контакты</a>
                             </li>
                         </ul>
-
-                        <span class="header__menu-mobile" id="mobile-menu-open">
-                            <i class="fas fa-bars"></i>
-                        </span>
                     </nav>
-
-                    <div class="header__callback">
-                        <a
-                            href="tel:+79517116321"
-                            class="btn btn--transparent btn--icon btn--uppercase">
-                            <i class="fas fa-phone flip--horizontal fa-circle"></i>8 951 711 63 21</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <section class="modern">
-                <div class="modern__background">
-                    <div class="container flex flex-column flex-align-center">
-                        <h1>Современный ремонт
-                            <br>в вашей квартире</h1>
-                        <span>Время работы 9:00 - 19:00
-                            <br>
-                            Тел.
+                    <div class="footer__adress">
+                        <p class="adress" id="address">
+                            <i class="fas fa-map-marker-alt fa-circle--footer"></i>
+                            <span>г. Москва, ул. Молодежная 61</span><br>
+                            Работаем с 9:00 до 19:00.</p>
+                        <p class="phone">
+                            <i class="fas fa-phone flip--horizontal fa-circle--footer"></i>
                             <a href="tel:+79517116321">
                                 8 951 711 63 21</a>
-                        </span>
-                        <a href="#" class="btn btn--green btn--gradient" onclick="sfOpen();">Заказать проект</a>
-                    </div>
-                </div>
-            </section>
-            <section class="about">
-                <div class="container">
-                    <div class="headline-wrap">
-                        <h2>О нас</h2>
-                    </div>
-                    <div class="about__content">
-                        <p>
-                            В современном мире многие строительные компании и фирмы по преображению
-                            помещений предлагают осуществить ремонт квартир под ключ. В это понятие входит
-                            не только создание визуально красивой отделки стен, потолка и пола, а и
-                            электромонтажные, сантехнические, малярные работы, включая дизайнерское
-                            оформление, как завершающий этап. Целью таких действий есть повышения уровня
-                            прожиточного комфорта и снижение стоимости обслуживания помещения. Что же
-                            подразумевает современный ремонт, какие его этапы и что получает клиент?</p>
-
-                        <div class="about__content-spoiler">
-                            <div class="trigger-wrap">
-                                <a href="#">Подробнее...</a>
-                            </div>
-                            <h6>
-                                Современный ремонт квартиры: с чего начать и на что обратить внимание
-                            </h6>
-                            <p>
-                                Каждый человек, который желает заказать ремонт своей квартиры, хочет получить
-                                безопасные условия, повышенный комфорт и уют, а также максимальное удобство
-                                повседневной жизни. Это будет зависеть от выбранных материалов, их прочности и
-                                долгосрочности использования, качества работы ремонтников, которые будут
-                                заниматься состоянием помещения. Добиться наилучших результатов получиться в
-                                случае:
-                            </p>
-                            <ul>
-                                <li>разработки правильного и профессионального проекта и планировки квартиры;</li>
-                                <li>при строгом следовании проектной документации и выполнении всех правил
-                                    монтажного, сантехнического и внутриотделочного ремонта;</li>
-                                <li>при использовании современных высококачественных материалов и
-                                    технологического оснащения.</li>
-                            </ul>
-                            <p>
-                                Важным этапом есть выбор компании, которая ответственно отнесется к заказу,
-                                примет во внимание все пожелания клиента и качественно будет выполнять свою
-                                работу. Профессионалы «White House» готовы взяться за современный ремонт любой
-                                сложности, обсудив все нюансы и четко выполняя все очерченные этапы.
-                            </p>
-                            <h6>
-                                Порядок организации ремонта квартир в Москве
-                            </h6>
-                            <p>
-                                Первым этапом, конечно же, будет телефонный разговор при котором будут уточнятся
-                                основные подробности и получении желаемого результата. Консультант будет
-                                задавать наводящие вопросы, чтобы предварительно создать примерную картинку
-                                того, что должно получиться.
-                            </p>
-                            <p>
-                                После детально оговоренных пожеланий по получению конечного результата с
-                                представителем компании, в обязательном порядке на объект выезжает замерщик,
-                                который оценивает помещение и снимает нужные замеры для создания проекта. Обычно
-                                выбирается время, которое будет удобно и клиенту, и компании. Однако, уважающие
-                                себя заведения часто идут на уступки, поэтому договориться о дате и времени
-                                визита можно всегда.
-                            </p>
-                            <p>
-                                Чтобы клиент был спокоен и мог рассчитывать на конкретные денежные вложения для
-                                ремонта своей квартиры, составляется смета расходов. После чего заключается
-                                договор с компанией на определенный период, за который все работы по дому должны
-                                будут быть выполненными. Остается только немного подождать и заехать жить в
-                                квартиру своих фантазий.
-                            </p>
-                            <h6>
-                                Что включает ремонт квартир СПб
-                            </h6>
-                            <p>
-                                Современный ремонт квартиры включает в себя много разных аспектов по проведению
-                                разноплановых работ. Например:
-                            </p>
-                            <ol>
-                                <li>
-                                    Проведение подготовительных работ. Они подразумевают очищение помещения от
-                                    старых отделок, выравнивание потолков и стен, нанесение черновой стяжки.
-                                </li>
-                                <li>
-                                    Создание новой планировки жилого помещения. Это позволит создать максимальный
-                                    комфорт и учесть все пожелания.
-                                </li>
-                                <li>
-                                    Проведение сантехнических работ. Этот этап есть обязательным, ведь за новым
-                                    ремонтом, старые трубопроводы могут подкачать и испортить весь труд. Заново
-                                    монтированные трубы, установка радиатора отопления и дополнительной защиты от
-                                    возможных протеканий избавит от переживаний и позволит спокойно наслаждаться
-                                    жизнью.
-                                </li>
-                                <li>
-                                    Разводка электричества. Поскольку современный человек имеет огромное количество
-                                    приспособлений, что питаются электроэнергией, то грамотная разводка, правильно
-                                    проложенные кабеля и размещение розеток, включателей существенно облегчит бытие.
-                                    Поэтому электромонтажные работы в ремонте квартир занимают одно из главных мест.
-                                </li>
-                                <li>
-                                    Формирование стяжки и утепление стен, внутренняя отделка квартиры. Этот этап
-                                    наиболее обширный и продолжительный. Под чистовой отделкой подразумевается
-                                    укладка плитки, окрашивание стен, нанесение штукатурки или оформление обоями,
-                                    установка подвесных потолков и проведение других отделочных работ, что придадут
-                                    стенам, полу и потолку оконченного вида.
-                                </li>
-                                <li>
-                                    Дизайнерские услуги по ремонту квартир проводятся для декорирования помещения в
-                                    современном стиле. Часто здесь используется авторский подход при котором
-                                    помещение оформляется в одном из известных модных стилей (модерн, классика,
-                                    хай-тек и другие).
-                                </li>
-                            </ol>
-                            <p>
-                                Обычно опытные мастера в завершение всех работ подключают кухонную технику,
-                                душевые кабины и другие приборы, чтоб клиент мог зайти в свой дом и начать
-                                пользоваться всем необходимым без лишних хлопот.
-                            </p>
-                            <h6>
-                                Какие преимущества имеет страховка ремонта квартиры
-                            </h6>
-                            <p>
-                                Страховка на время ремонта квартиры дает возможность не переживать о возможных
-                                причиненных неприятностях соседям и обрести уверенность в качестве выполняемых
-                                работ. В случае непредвиденных ситуаций всю материальную сторону вопроса возьмет
-                                на себя страховая компания. В перечень возможных конфузов могут входить:
-                            </p>
-                            <ul>
-                                <li>
-                                    нанесение вреда имуществу в результате механического воздействия;
-                                </li>
-                                <li>
-                                    повреждение проводки и нарушение правил противопожарной безопасности;
-                                </li>
-                                <li>
-                                    затопление или последствия атмосферных явлений;
-                                </li>
-                                <li>
-                                    кража имущества.
-                                </li>
-                            </ul>
-                            <p>
-                                Страхование же после проведения ремонтных работ дает возможность возместить
-                                финансовые средства за дорогую обивку и покрытие стен и потолка, при
-                                использовании горючих материалов в ремонте и инженерные коммуникации.
-                            </p>
-                            <p>
-                                Заказать ремонт квартиры и не переживать за некачественные работы можно у
-                                компании «White House». Каждый клиент получает индивидуальный подход, бесплатные
-                                услуги замерщика и выполнение ремонта в оговоренные строки. Мы работаем
-                                качественно на отменный конечный результат. Об этом свидетельствуют наших
-                                клиентов, которые доверили нам свои помещения. Убедитесь сами в нашем
-                                профессионализме и компетентности в мире современного оформления квартир!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="advantages" id="advantages">
-                <div class="container">
-                    <div class="headline-wrap">
-                        <h2>Наши преимущества</h2>
-                    </div>
-                    <div class="row wrap center">
-                        <div class="col col-1-of-3 advantages__one ">
-                            <span class="advantages__one-image experience"></span>
-                            <div class="advantages__one-text">
-                                <h3>Опыт</h3>
-                                <p>Сделали более 200
-                                    <br>успешных проектов</p>
-                            </div>
-                        </div>
-                        <div class="col col-1-of-3 advantages__one ">
-                            <span class="advantages__one-image measure"></span>
-                            <div class="advantages__one-text">
-                                <h3>Масштабы</h3>
-                                <p>Выезжаем в любую
-                                    <br>точку области</p>
-                            </div>
-                        </div>
-                        <div class="col col-1-of-3 advantages__one ">
-                            <span class="advantages__one-image clarity"></span>
-                            <div class="advantages__one-text">
-                                <h3>Прозрачность</h3>
-                                <p>Никаких сюрпризов
-                                    <br>в конце работы</p>
-                            </div>
-                        </div>
-                        <div class="col col-1-of-3 advantages__one ">
-                            <span class="advantages__one-image benefit"></span>
-                            <div class="advantages__one-text">
-                                <h3>Польза</h3>
-                                <p>Mы всегда воплощаем
-                                    <br>желания клиентов</p>
-                            </div>
-                        </div>
-                        <div class="col col-1-of-3 advantages__one ">
-                            <span class="advantages__one-image result"></span>
-                            <div class="advantages__one-text">
-                                <h3>Результат</h3>
-                                <p>Мы не говорим
-                                    <br>мы делаем</p>
-                            </div>
-                        </div>
-                        <div class="col col-1-of-3 advantages__one ">
-                            <span class="advantages__one-image outline"></span>
-                            <div class="advantages__one-text">
-                                <h3>Смета</h3>
-                                <p>Вы будете знать
-                                    <br>точную стоимость</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="services" id="nashi-uslugi">
-                <div class="container container--wide">
-                    <div class="headline-wrap">
-                        <h2>Наши услуги</h2>
-                    </div>
-                    <h3 class="services__outer col">Бесплатный замер и составление сметы</h3>
-
-                    <div class="row wrap center with-gutter">
-                        <div class="col services__one services__one--electricity">
-                            <h3>Электромонтажные работы</h3>
-                            <ul>
-                                <li>Замена и прокладка проводки</li>
-                                <li>Установка светильников</li>
-                                <li>Замена розеток</li>
-                            </ul>
-                        </div>
-                        <div class="col services__one services__one--plumbing">
-                            <h3>Сантехнические работы</h3>
-                            <ul>
-                                <li>Замена и прокладка проводки</li>
-                                <li>Установка светильников</li>
-                                <li>Замена розеток</li>
-                            </ul>
-                        </div>
-                        <div class="col services__one services__one--painting">
-                            <h3>Малярные работы</h3>
-                            <ul>
-                                <li>Замена и прокладка проводки</li>
-                                <li>Установка светильников</li>
-                                <li>Замена розеток</li>
-                            </ul>
-                        </div>
-                        <div class="col services__one services__one--decoration">
-                            <h3>Внутренняя отделка</h3>
-                            <ul>
-                                <li>Замена и прокладка проводки</li>
-                                <li>Установка светильников</li>
-                                <li>Замена розеток</li>
-                            </ul>
-                        </div>
-                        <div class="col services__one services__one--design">
-                            <h3>Услуги дизайнера</h3>
-                            <ul>
-                                <li>Замена и прокладка проводки</li>
-                                <li>Установка светильников</li>
-                                <li>Замена розеток</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="feedback">
-                <div class="container flex">
-                    <div class="feedback__content">
-                        <h3>Оставьте заявку на бесплатный расчет стоимости ремонта</h3>
-                        <form class="target-form" action="mail.php" method="post">
-                            <div class="target-form-content row center">
-                                <input type="text" placeholder="Имя" name="name" required="required">
-                                <input
-                                    type="text"
-                                    placeholder="Контактный телефон"
-                                    name="phone"
-                                    required="required">
-                                <input class="btn btn--green" type="submit" value="Отправить">
-                            </div>
-                        </form>
-                        <p class="feedback__content-note">*Ваши данные не будут переданы третьим лицам. И мы не спамим</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="portfolio" id="portfolio">
-                <div class="container flex flex-column flex-align-center">
-                    <div class="headline-wrap">
-                        <h2>Портфолио</h2>
+                        </p>
                     </div>
 
-                    <div class="portfolio__development disabled">
-                        <p>В настоящее время мы работаем над наполнением данного раздела.</p>
-                        <p>Приносим извинения за временные неудобства!</p>
-                        <p>А пока посмотрите,
-                            <a href="#clients">что говорят о нас клиенты</a>...</p>
-                        <p class="portfolio__development-regards">С уважением,
-                            <br>Компания РитмРемонт</p>
-                    </div>
-
-                    <div class="portfolio__content row wrap center">
-                        <div class="col portfolio__content-single"><img src="image/portfolio-1.jpeg" alt="1"></div>
-                        <div class="col portfolio__content-single"><img src="image/portfolio-2.jpeg" alt="2"></div>
-                        <div class="col portfolio__content-single"><img src="image/portfolio-3.jpeg" alt="3"></div>
-                        <div class="col portfolio__content-single"><img src="image/portfolio-4.jpeg" alt="4"></div>
-                        <div class="col portfolio__content-single"><img src="image/portfolio-5.jpeg" alt="5"></div>
-                        <div class="col portfolio__content-single"><img src="image/portfolio-6.jpeg" alt="6"></div>
-                        <div class="col portfolio__content-single"><img src="image/portfolio-7.jpeg" alt="7"></div>
-                        <div class="col portfolio__content-single"><img src="image/portfolio-8.jpeg" alt="8"></div>
-                    </div>
-                    <a href="#" class="btn btn--green" onclick="sfOpen();">Хочу также!</a>
-                </div>
-            </section>
-
-            <section class="clients" id="clients">
-                <div class="container">
-                    <div class="headline-wrap">
-                        <h2>Что говорят наши клиенты</h2>
-                    </div>
-                    <div class="slider">
-                        <div class="peppermint" id="peppermint">
-                            <div class="clients__block row">
-                                <img src="image/client-photo.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem
-                                    ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum
-                                    distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br>
-                                    <a href="#">Татьяна Иванова
-                                        <span>
-                                            <i class="fab fa-vk"></i></span></a>
-                                </p>
-                            </div>
-                            <div class="clients__block row">
-                                <img src="image/client-photo.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem
-                                    ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum
-                                    distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br>
-                                    <a href="#">Татьяна Иванова
-                                        <span>
-                                            <i class="fab fa-vk"></i></span></a>
-                                </p>
-                            </div>
-                            <div class="clients__block row">
-                                <img src="image/client-photo.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui asperiores, rem
-                                    ipsam. Quaerat aut asperiores inventore, sunt optio rem itaque ipsum illum
-                                    distinctio, mollitia ut molestiae, vel. Adipisci, deserunt, sapiente?<br>
-                                    <a href="#">Татьяна Иванова
-                                        <span>
-                                            <i class="fab fa-vk"></i></span></a>
-                                </p>
-                            </div>
+                    <div class="footer__socials">
+                        <p>С другой стороны постоянное информационно пропагандистское обеспечение нашей
+                            деятельности</p>
+                        <div>
+                            <a href="https://vk.com/club126218134">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ritmremont/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:info@wh77.ru">
+                                <i class="fas fa-envelope"></i>
+                            </a>
                         </div>
 
-                        <a class="slider__nav" href="javascript:void()" id="peppermint-left"></a>
-
-                        <a
-                            class="slider__nav slider__nav--right flip--horizontal"
-                            href="javascript:void()"
-                            id="peppermint-right"></a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="steps">
-                <div class="container">
-                    <div class="headline-wrap">
-                        <h2>Схема работы</h2>
-                    </div>
-
-                    <div class="steps__content row wrap space-between">
-                        <div class="steps__content-step step-one">
-                            <h3>Звонок</h3>
-                            <p>Мы созваниваемся
-                                <br>и обсуждаем подробности</p>
-                        </div>
-                        <div class="steps__content-step step-two">
-                            <h3>Встреча</h3>
-                            <p>В удобное для Вас
-                                <br>время приезжаем на объект</p>
-                        </div>
-                        <div class="steps__content-step step-three">
-                            <h3>Замер</h3>
-                            <p>Производим
-                                <br>бесплатный замер</p>
-                        </div>
-                        <div class="steps__content-step step-four">
-                            <h3>Смета</h3>
-                            <p>Составляем
-                                <br>подробную смету</p>
-                        </div>
-                        <div class="steps__content-step step-five">
-                            <h3>Договор</h3>
-                            <p>Заключаем
-                                <br>понятный договор</p>
-                        </div>
-                        <div class="steps__content-step step-six">
-                            <h3>Работы</h3>
-                            <p>Выполняем все
-                                <br>необходимые работы</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="questions">
-                <div class="container">
-                    <div class="questions__content">
-                        <h3>Остались вопросы?</h3>
-                        <h3>Заполните заявку, и мы Вам перезвоним.</h3>
-                        <form class="target-form" action="mail.php" method="post">
-                            <div class="target-form-content row center">
-                                <input type="text" placeholder="Имя" name="name" required="required">
-                                <input
-                                    type="text"
-                                    placeholder="Контактный телефон"
-                                    name="phone"
-                                    required="required">
-                                <input class="btn btn--green" type="submit" value="Отправить">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-            <section class="map" id="kontakty">
-                <script src="js/yandex.map.js"></script>
-            </section>
-
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__content row space-between">
-                    <div class="col-1-of-3 col col--left">
-                        <a href="/"><img src="image/logo-light.png" alt="White House"></a>
-                    </div>
-
-                    <div class="col-2-of-4 col col--mid">
-                        <nav class="footer__menu">
-                            <ul>
-                                <li>
-                                    <a href="index.html">Главная</a>
-                                </li>
-                                <li>
-                                    <a href="#">Услуги</a>
-                                </li>
-                                <li>
-                                    <a href="#">Расчет стоимости</a>
-                                </li>
-                                <li>
-                                    <a href="#">Новости</a>
-                                </li>
-                                <li>
-                                    <a href="#">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="footer__adress">
-                            <p class="adress" id="address">
-                                <i class="fas fa-map-marker-alt fa-circle--footer"></i>
-                                <span>г. Москва, ул. Молодежная 61</span><br>
-                                Работаем с 9:00 до 19:00.</p>
-                            <p class="phone">
-                                <i class="fas fa-phone flip--horizontal fa-circle--footer"></i>
-                                <a href="tel:+79517116321">
-                                    8 951 711 63 21</a>
-                            </p>
-                        </div>
-
-                        <div class="footer__socials">
-                            <p>С другой стороны постоянное информационно пропагандистское обеспечение нашей
-                                деятельности</p>
-                            <div>
-                                <a href="https://vk.com/club126218134">
-                                    <i class="fab fa-vk"></i>
-                                </a>
-                                <a href="https://www.instagram.com/ritmremont/">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="mailto:info@wh77.ru">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <div class="mobile-menu animated disabled" id="mobile-menu">
-            <div class="mobile-menu-wrap">
-                <ul>
-                    <li>
-                        <a class="mobile-menu-link" href="index.html">Главная</a>
-                    </li>
-                    <li>
-                        <a class="mobile-menu-link" href="#">Услуги</a>
-                    </li>
-                    <li>
-                        <a class="mobile-menu-link" href="#">Расчет стоимости</a>
-                    </li>
-                    <li>
-                        <a class="mobile-menu-link" href="news.html">Новости</a>
-                    </li>
-                    <li>
-                        <a class="mobile-menu-link" href="#">Контакты</a>
-                    </li>
-                </ul>
-
-                <span class="mobile-menu-close" id="mobile-menu-close">
-                    <i class="fas fa-times"></i>
-                </span>
-            </div>
         </div>
+    </footer>
+    <div class="mobile-menu animated disabled" id="mobile-menu">
+        <div class="mobile-menu-wrap">
+            <ul>
+                <li>
+                    <a class="mobile-menu-link" href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a class="mobile-menu-link" href="#">Услуги</a>
+                </li>
+                <li>
+                    <a class="mobile-menu-link" href="#">Расчет стоимости</a>
+                </li>
+                <li>
+                    <a class="mobile-menu-link" href="news.html">Новости</a>
+                </li>
+                <li>
+                    <a class="mobile-menu-link" href="#">Контакты</a>
+                </li>
+            </ul>
 
-        <div class="sendform disabled" id="sendform">
-            <div class="sendform__wrap animated bounceInDown">
-                <span id="sendform-close">
-                    <i class="fas fa-times"></i>
-                </span>
-                <h3>Оставьте заявку,<br>
-                    и мы вам перезвоним</h3>
-                <form action="mail.php" method="post">
-                    <label>
-                        <span>Имя</span>
-                        <input type="text" name="name" required="required">
-                    </label>
-
-                    <label>
-                        <span>Телефон</span>
-                        <input type="text" name="phone" required="required">
-                    </label>
-                    <input type="submit" class="btn btn--green" value="Заказать проект">
-                </form>
-            </div>
+            <span class="mobile-menu-close" id="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </span>
         </div>
+    </div>
 
-        <div class="go-top-wrap animate" id="go-top">
-            <a class="go-top" href="#top"></a>
+    <div class="sendform disabled" id="sendform">
+        <div class="sendform__wrap animated bounceInDown">
+            <span class="sendform-close" id="sendform-close">
+                <i class="fas fa-times"></i>
+            </span>
+            <h3>Оставьте заявку,<br>
+                и мы вам перезвоним</h3>
+            <form action="mail.php" method="post">
+                <label>
+                    <span>Имя</span>
+                    <input type="text" name="name" required="required">
+                </label>
+
+                <label>
+                    <span>Телефон</span>
+                    <input type="text" name="phone" required="required">
+                </label>
+                <input type="submit" class="btn btn--green" value="Заказать проект">
+            </form>
         </div>
+    </div>
 
-        <script src="js/peppermint.min.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/modals.js"></script>
-        <script src="js/scrolling.js"></script>
-        <script src="js/top-button.js"></script>
-        <script src="js/js-cookie.js"></script>
-        <script src="js/geocitycookie.js"></script>
-        <script src="js/imgpopup.js"></script>
-        <script src="js/spoiler.js"></script>
-    </body>
+    <div class="sendform display-none" id="promo">
+        <div class="sendform__wrap animated bounceInDown">
+            <span class="sendform-close" id="promo-close">
+                <i class="fas fa-times"></i>
+            </span>
+            <h3>ТОЛЬКО ДО КОНЦА ФЕВРАЛЯ!</h3>
+            <p>При заказе услуги "Ремонт под ключ" Дизайн-проект вы получаете абсолютно БЕСПЛАТНО!</p>
+            <p>Оставьте заявку и мы с Вами свяжемся.</p>
+            <form action="mail.php" method="post">
+                <label>
+                    <span>Имя</span>
+                    <input type="text" name="name" required="required">
+                </label>
+
+                <label>
+                    <span>Телефон</span>
+                    <input type="text" name="phone" required="required">
+                </label>
+                <input type="submit" class="btn btn--green" value="Заказать проект">
+            </form>
+        </div>
+    </div>
+
+    <div class="go-top-wrap animate" id="go-top">
+        <a class="go-top" href="#top"></a>
+    </div>
+
+    <script src="js/peppermint.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/scrolling.js"></script>
+    <script src="js/top-button.js"></script>
+    <script src="js/js-cookie.js"></script>
+    <script src="js/geocitycookie.js"></script>
+    <script src="js/imgpopup.js"></script>
+    <script src="js/spoiler.js"></script>
+    <script src="js/promo.js"></script>
+</body>
 
 </html>
