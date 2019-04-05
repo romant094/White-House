@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function geoCityCookie() {
     'use strict';
 
     let city = Cookies.get('wh_city'),
@@ -106,4 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('Fetch Error :-S', err);
             });
     }
-});
+}
+
+module.exports = geoCityCookie;

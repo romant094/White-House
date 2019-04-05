@@ -1,2 +1,5 @@
-/files/
-json_api.txt
+/ignore/
+/node_modules/
+/.idea/
+*.map
+*.lock

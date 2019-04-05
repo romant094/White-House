@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>White House - news</title>
+    <title>White House - 404</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -35,74 +35,19 @@
             </div>
         </div>
     </header>
+
     <main>
-
-    <div class="container slider">
-        <div class="slider__wrap peppermint" id="news-slider">
-            <div class="slide slide--one">
-                <div class="slide__text">
-                    <h2 class="slide__text-heading">Кофе в подарок</h2>
-                    <p class="slide__text-comment">Заправляя полный бак на наших АЗС, Вы получаете бесплатный кофе на ваш выбор.</p>
-                </div>
+        <section class="not-found">
+            <div class="container flex flex-column flex-align-center">
+                <h1>404</h1>
+                <p class="not-found__text">Извините, такой страницы не существует</p>
+                <p class="not-found__solution">Исправьте ошибку в ссылке или начните сначала</p>
+                <a href="index.html" class="btn btn--green btn--gradient btn--uppercase" onclick="sfOpen();">Перейти на главную</a>
             </div>
-            <div class="slide slide--one">
-                <div class="slide__text">
-                    <h2 class="slide__text-heading">Кофе в подарок</h2>
-                    <p class="slide__text-comment">Заправляя полный бак на наших АЗС, Вы получаете бесплатный кофе на ваш выбор.</p>
-                </div>
-            </div>
-            <div class="slide slide--one">
-                <div class="slide__text">
-                    <h2 class="slide__text-heading">Кофе в подарок</h2>
-                    <p class="slide__text-comment">Заправляя полный бак на наших АЗС, Вы получаете бесплатный кофе на ваш выбор.</p>
-                </div>
-            </div>
-        </div>
+        </section>
+        
 
-        <div class="slider__arrows">
-            <a href="javascript:void(0)" class="slider__arrows-left arrow" id="slider__arrows-left"></a>
-            <a href="javascript:void(0)" class="slider__arrows-right arrow" id="slider__arrows-right"></a>
-        </div>
-    </div>
-
-    <div class="container news">
-        <h2>Новости</h2>
-        <div class="news__content">
-            <div class="news__content-single">
-                <a href="javascript:void(0)">
-                    <img src="image/news1.png" alt="">
-                </a>
-                <time>12.01.18</time>
-                <a href="javascript:void(0)">
-                    <h3>Открытие АЗС в Ростовской области после реконструкции</h3>
-                </a>
-                <p>В Ростовской области после масштабной реконструкции открылась АЗС «Газпром» №230.</p>
-            </div>
-            <div class="news__content-single">
-                <a href="javascript:void(0)">
-                    <img src="image/news2.png" alt="">
-                </a>
-                <time>12.01.18</time>
-                <a href="javascript:void(0)">
-                    <h3>Акция «Скидка на ДТ»</h3>
-                </a>
-                <p>C 28.05.2018 года меняются условия получения скидки при заправке автомобиля дизельным топливом по акции «Скидка на ДТ».</p>
-            </div>
-            <div class="news__content-single">
-                <a href="javascript:void(0)">
-                    <img src="image/news3.png" alt="">
-                </a>
-                <time>12.01.18</time>
-                <a href="javascript:void(0)">
-                    <h3>Открытие АЗС в Ростовской области после реконструкции</h3>
-                </a>
-                <p>В Ростовской области послемасштабной реконструкции открылась АЗС «Газпром» №230.</p>
-            </div>
-        </div>
-    </div>
-
-
-
+        
     </main>
     <footer class="footer">
         <div class="container">
@@ -173,12 +118,8 @@
         </div>
     </div>
 
-    <script src="js/peppermint.min.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/modals.js"></script>
-    <script src="js/scrolling.js"></script>
-    <script src="js/top-button.js"></script>
+    <script src="js/js-cookie.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
 
 </html>
-
