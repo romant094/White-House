@@ -8,14 +8,16 @@ window.addEventListener('DOMContentLoaded', () => {
         promo = require('./parts/promo.js'),
         scrolling = require('./parts/scrolling.js'),
         spoiler = require('./parts/spoiler.js'),
+        portfolio = require('./parts/portfolio.js'),
         top = require('./parts/top-button.js');
 
-    geoCityCookie();
+    // geoCityCookie();
     imgPopup();
     modals();
     ppSlider();
     promo();
-    scrolling();
+    // scrolling();
     spoiler();
     top();
+    portfolio();
 });

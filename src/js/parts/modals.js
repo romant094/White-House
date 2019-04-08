@@ -1,11 +1,12 @@
 function modals() {
-    let mobileMenu = document.querySelector('#mobile-menu'),
+    const mobileMenu = document.querySelector('#mobile-menu'),
         mobileMenuOpen = document.querySelector('#mobile-menu-open'),
         mobileMenuClose = document.querySelector('#mobile-menu-close'),
         mobileMenuLink = document.getElementsByClassName('mobile-menu-link'),
         sendform = document.querySelector('#sendform'),
         sendformWrap = document.querySelector('.sendform__wrap'),
-        sendformClose = document.querySelector('#sendform-close');
+        sendformClose = document.querySelector('#sendform-close'),
+        modalOpen = document.querySelectorAll('.modal-open');
 
     function mmClose() {
         mobileMenu.classList.remove('active', 'fadeInRight');
@@ -27,32 +28,35 @@ function modals() {
         setTimeout("sendform.classList.remove('flex')", 800);
     }
 
-    window.addEventListener("DOMContentLoaded", function () {
-
-        mobileMenuOpen.addEventListener('click', () => {
-            mobileMenu.classList.remove('disabled', 'fadeOutRight');
-            mobileMenu.classList.add('active', 'fadeInRight');
+    modalOpen.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            sfOpen();
         });
+    });
 
-        mobileMenuClose.addEventListener('click', () => {
+    mobileMenuOpen.addEventListener('click', (event) => {
+        mobileMenu.classList.remove('disabled', 'fadeOutRight');
+        mobileMenu.classList.add('active', 'fadeInRight');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mmClose();
+    });
+
+    for (let i = 0; i < mobileMenuLink.length; i++) {
+        mobileMenuLink[i].addEventListener('click', () => {
             mmClose();
         });
+    }
 
-        for (let i = 0; i < mobileMenuLink.length; i++) {
-            mobileMenuLink[i].addEventListener('click', () => {
-                mmClose();
-            });
-        }
-
-        sendform.addEventListener('click', e => {
-            if (e.target !== sendformWrap && e.target == sendform) {
-                sfCLose();
-            }
-        });
-
-        sendformClose.addEventListener('click', () => {
+    sendform.addEventListener('click', e => {
+        if (e.target !== sendformWrap && e.target == sendform) {
             sfCLose();
-        });
+        }
+    });
+
+    sendformClose.addEventListener('click', () => {
+        sfCLose();
     });
 }
 

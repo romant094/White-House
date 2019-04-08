@@ -10411,7 +10411,8 @@ function modals() {
       mobileMenuLink = document.getElementsByClassName('mobile-menu-link'),
       sendform = document.querySelector('#sendform'),
       sendformWrap = document.querySelector('.sendform__wrap'),
-      sendformClose = document.querySelector('#sendform-close');
+      sendformClose = document.querySelector('#sendform-close'),
+      modalOpen = document.querySelectorAll('.modal-open');
 
   function mmClose() {
     mobileMenu.classList.remove('active', 'fadeInRight');
@@ -10433,29 +10434,32 @@ function modals() {
     setTimeout("sendform.classList.remove('flex')", 800);
   }
 
-  window.addEventListener("DOMContentLoaded", function () {
-    mobileMenuOpen.addEventListener('click', function () {
-      mobileMenu.classList.remove('disabled', 'fadeOutRight');
-      mobileMenu.classList.add('active', 'fadeInRight');
+  modalOpen.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      sfOpen();
     });
-    mobileMenuClose.addEventListener('click', function () {
+  });
+  mobileMenuOpen.addEventListener('click', function (event) {
+    mobileMenu.classList.remove('disabled', 'fadeOutRight');
+    mobileMenu.classList.add('active', 'fadeInRight');
+  });
+  mobileMenuClose.addEventListener('click', function () {
+    mmClose();
+  });
+
+  for (var i = 0; i < mobileMenuLink.length; i++) {
+    mobileMenuLink[i].addEventListener('click', function () {
       mmClose();
     });
+  }
 
-    for (var i = 0; i < mobileMenuLink.length; i++) {
-      mobileMenuLink[i].addEventListener('click', function () {
-        mmClose();
-      });
-    }
-
-    sendform.addEventListener('click', function (e) {
-      if (e.target !== sendformWrap && e.target == sendform) {
-        sfCLose();
-      }
-    });
-    sendformClose.addEventListener('click', function () {
+  sendform.addEventListener('click', function (e) {
+    if (e.target !== sendformWrap && e.target == sendform) {
       sfCLose();
-    });
+    }
+  });
+  sendformClose.addEventListener('click', function () {
+    sfCLose();
   });
 }
 
@@ -11159,6 +11163,82 @@ module.exports = ppSlider;
 
 /***/ }),
 
+/***/ "./parts/portfolio.js":
+/*!****************************!*\
+  !*** ./parts/portfolio.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function portfolio() {
+  console.log('portfolio'); // fetch('js/objects.json')
+  //     .then((res)=>{
+  //         console.log(res);
+  //     })
+  //     .catch((res)=>{
+  //         console.log('Error: ', res);
+  //     });
+
+  var objectsInfo = [{
+    "id": 1,
+    "photoCount": 8,
+    "name": "Квартира",
+    "address": "Смоленск, Пригородная, 11"
+  }, {
+    "id": 2,
+    "photoCount": 4,
+    "name": "Дом",
+    "address": "Питер, проспет Строителей, 11"
+  }],
+      photosPath = 'image/objects/',
+      photos = [];
+  var d = document,
+      objects = d.querySelector('.portfolio__content'),
+      devMessage = d.querySelector('.portfolio__development'),
+      showDevMessage = false;
+
+  if (objectsInfo.length === 0) {
+    showDevMessage = true;
+  } else {
+    objectsInfo.forEach(function (item, key) {
+      item.paths = [];
+
+      for (var i = 0; i < item.photoCount; i++) {
+        var path = "".concat(photosPath, "portfolio-").concat(key + 1, "-").concat(i + 1, ".jpeg");
+        item.paths.push(path); // let newObject = d.createElement('div'),
+        //     objectImg = d.createElement('img');
+        // img.setAttribute('src', path);
+        // img.setAttribute('alt', i + 1);
+        // newObject.classList.add('col', 'portfolio__content-single');
+        // newPhoto.appendChild(img);
+        // objects.appendChild(newPhoto);
+      }
+
+      var newObjectWrap = createDiv(['col', 'portfolio__content-single']),
+          newObject = createDiv(['portfolio__content-block']);
+      newObject.textContent = item.name;
+      newObject.style.cssText = "background: url(".concat(item.paths[0], "), rgba(0,0,0,0.75);");
+      newObjectWrap.appendChild(newObject);
+      objects.appendChild(newObjectWrap);
+    });
+  }
+
+  console.log(objectsInfo);
+  showDevMessage === true ? devMessage.classList.remove('display-none') : devMessage.classList.add('display-none');
+
+  function createDiv(classArray) {
+    var div = document.createElement('div');
+    classArray.forEach(function (item) {
+      div.classList.add(item);
+    });
+    return div;
+  }
+}
+
+module.exports = portfolio;
+
+/***/ }),
+
 /***/ "./parts/promo.js":
 /*!************************!*\
   !*** ./parts/promo.js ***!
@@ -11324,16 +11404,18 @@ window.addEventListener('DOMContentLoaded', function () {
       promo = __webpack_require__(/*! ./parts/promo.js */ "./parts/promo.js"),
       scrolling = __webpack_require__(/*! ./parts/scrolling.js */ "./parts/scrolling.js"),
       spoiler = __webpack_require__(/*! ./parts/spoiler.js */ "./parts/spoiler.js"),
-      top = __webpack_require__(/*! ./parts/top-button.js */ "./parts/top-button.js");
+      portfolio = __webpack_require__(/*! ./parts/portfolio.js */ "./parts/portfolio.js"),
+      top = __webpack_require__(/*! ./parts/top-button.js */ "./parts/top-button.js"); // geoCityCookie();
 
-  geoCityCookie();
+
   imgPopup();
   modals();
   ppSlider();
-  promo();
-  scrolling();
+  promo(); // scrolling();
+
   spoiler();
   top();
+  portfolio();
 });
 
 /***/ }),

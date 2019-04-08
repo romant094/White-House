@@ -912,6 +912,10 @@ margin-bottom: 10px;
   padding: 0 0.5vw;
   margin-bottom: 30px;
 }
+.portfolio__content-block{
+  color: #fff;
+  width: 100%;
+}
 .portfolio__content-single img {
   width: 100%;
   height: auto;
@@ -2000,7 +2004,7 @@ margin-bottom: 10px;
     margin-bottom: 40px;
   }
   .feedback .container {
-    width: 100vw;
+    width: 100%;
   }
   .feedback__content {
     width: 100vw;
@@ -2052,11 +2056,11 @@ margin-bottom: 10px;
     padding: 0;
   }
   .questions .container {
-    width: 100vw;
+    width: 100%;
   }
   .questions__content {
     padding: 40px 0;
-    width: 100vw;
+    width: 100%;
     margin: 0;
   }
   .questions__content h3,
