@@ -10,7 +10,9 @@ function portfolio() {
     //     });
 
     const param = 'name'; //выбрать name или address (это будет отображаться при наведении на картинку)
-    const photosPath = 'image/objects/'; // путь к фотографиям
+    const photosPath = '../image/objects/'; // путь к фотографиям (для прода)
+    // const photosPath = 'image/objects/'; // путь к фотографиям (локально)
+
 
     let objectsInfo = [
         {
