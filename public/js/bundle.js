@@ -11155,14 +11155,14 @@ window.addEventListener('DOMContentLoaded', function () {
       scrolling = __webpack_require__(/*! ./parts/scrolling.js */ "./parts/scrolling.js"),
       spoiler = __webpack_require__(/*! ./parts/spoiler.js */ "./parts/spoiler.js"),
       portfolio = __webpack_require__(/*! ./parts/portfolio.js */ "./parts/portfolio.js"),
-      top = __webpack_require__(/*! ./parts/top-button.js */ "./parts/top-button.js"); // geoCityCookie();
+      top = __webpack_require__(/*! ./parts/top-button.js */ "./parts/top-button.js");
 
-
+  geoCityCookie();
   imgPopup();
   modals();
   ppSlider();
-  promo(); // scrolling();
-
+  promo();
+  scrolling();
   spoiler();
   top();
   portfolio();

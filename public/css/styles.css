@@ -990,7 +990,7 @@ margin-bottom: 10px;
 }
 .portfolio__slider-slide img{
   display: block;
-  width: 50%;
+  width: 60%;
   height: auto;
   margin: 0 auto;
 }
@@ -2045,6 +2045,9 @@ margin-bottom: 10px;
   .container.slider {
     width: auto;
   }
+    .portfolio__slider-slide img {
+        width: 100%;
+    }
 }
 @media screen and (min-width: 720px) {
   .news-one h2 {
