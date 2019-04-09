@@ -10820,8 +10820,8 @@ function portfolio() {
     "address": "Смоленск, Пригородная, 11"
   }, {
     "id": 2,
-    "photoCount": 4,
-    "name": "Дом",
+    "photoCount": 8,
+    "name": "Квартира",
     "address": "Санкт-Петербург, проспект Железнодорожников, 111к1"
   }];
   var d = document,
