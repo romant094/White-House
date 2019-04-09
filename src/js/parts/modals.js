@@ -11,7 +11,7 @@ function modals() {
     function mmClose() {
         mobileMenu.classList.remove('active', 'fadeInRight');
         mobileMenu.classList.add('fadeOutRight');
-        setTimeout("mobileMenu.classList.add('disabled')", 1000);
+        // setTimeout("mobileMenu.classList.add('disabled')", 200);
     }
 
     function sfOpen() {

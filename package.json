@@ -29,5 +29,8 @@
     "formdata-polyfill": "^3.0.17",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "yuicompressor": "^2.4.8"
   }
 }

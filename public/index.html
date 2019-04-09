@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>White House</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -364,7 +364,7 @@
             </div>
         </section>
 
-        <section class="portfolio" id="portfolio1">
+        <section class="portfolio" id="portfolio">
             <div class="container flex flex-column flex-align-center">
                 <div class="headline-wrap">
                     <h2>Портфолио new</h2>
@@ -380,13 +380,34 @@
                 </div>
 
                 <div class="portfolio__content row wrap center">
-                    <div class="col portfolio__content-single">
-                        <div style="width: 50%">case 1</div></div>
+                    <!-- Сюда данные приходят из JS -->
+                </div>
+
+                <button class="btn btn--green modal-open" id="gallery-want">Хочу также!</button>
+
+                <div class="portfolio__slider animated fadeIn disabled" id="gallery-slider">
+                    <div class="container" id="gallery-inside">
+                        <!--<div class="portfolio__slider-close flex justify-end">
+                            <span>Закрыть [x]</span>
+                        </div>-->
+                        <div class="portfolio__slider-slide">
+                            <!--<img src="image/objects/portfolio-1-1.jpeg" alt="">-->
+                        </div>
+                        <div class="portfolio__slider-previews row center flex-align-center">
+                            <button>
+                                <span class="fas fa-chevron-left"></span>
+                            </button>
+                            <div class="portfolio__slider-miniwrap"></div>
+                            <button>
+                                <span class="fas fa-chevron-right"></span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio" id="portfolio">
+        <!--<section class="portfolio" id="portfolio1">
             <div class="container flex flex-column flex-align-center">
                 <div class="headline-wrap">
                     <h2>Портфолио</h2>
@@ -411,9 +432,9 @@
                     <div class="col portfolio__content-single"><img src="image/objects/portfolio-1-7.jpeg" alt="7"></div>
                     <div class="col portfolio__content-single"><img src="image/objects/portfolio-1-8.jpeg" alt="8"></div>
                 </div>
-                <button class="btn btn--green modal-open">Хочу также!</button>
+                <button class="btn btn&#45;&#45;green modal-open">Хочу также!</button>
             </div>
-        </section>
+        </section>-->
 
         <section class="clients" id="clients">
             <div class="container">

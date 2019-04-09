@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "photoCount": 8,
+    "name": "object 1",
+    "address": "Смоленск, Пригородная, 11"
+  },
+  {
+    "id": 2,
+    "photoCount": 8,
+    "name": "object 1",
+    "address": "Питер, проспет Строителей, 11"
+  }
+]
