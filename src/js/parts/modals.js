@@ -30,6 +30,7 @@ function modals() {
 
     modalOpen.forEach((item) => {
         item.addEventListener('click', (e) => {
+            e.preventDefault();
             sfOpen();
         });
     });

@@ -10066,6 +10066,7 @@ function modals() {
 
   modalOpen.forEach(function (item) {
     item.addEventListener('click', function (e) {
+      e.preventDefault();
       sfOpen();
     });
   });
@@ -10814,19 +10815,17 @@ function portfolio() {
   var photosPath = '../image/objects/'; // путь к фотографиям (для прода)
   // const photosPath = 'image/objects/'; // путь к фотографиям (локально)
 
-  var objectsInfo = [// {
-    //     "id": 1,
-    //     "photoCount": 8,
-    //     "name": "Квартира",
-    //     "address": "Смоленск, Пригородная, 11"
-    // },
-    // {
-    //     "id": 2,
-    //     "photoCount": 8,
-    //     "name": "Квартира",
-    //     "address": "Санкт-Петербург, проспект Железнодорожников, 111к1"
-    // }
-  ];
+  var objectsInfo = [{
+    "id": 1,
+    "photoCount": 8,
+    "name": "Квартира",
+    "address": "Смоленск, Пригородная, 11"
+  }, {
+    "id": 2,
+    "photoCount": 7,
+    "name": "Квартира",
+    "address": "Санкт-Петербург, проспект Железнодорожников, 111к1"
+  }];
   var d = document,
       objects = d.querySelector('.portfolio__content'),
       devMessage = d.querySelector('.portfolio__development'),

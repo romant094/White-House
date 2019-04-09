@@ -11,12 +11,12 @@ window.addEventListener('DOMContentLoaded', () => {
         portfolio = require('./parts/portfolio.js'),
         top = require('./parts/top-button.js');
 
-    // geoCityCookie();
+    geoCityCookie();
     imgPopup();
     modals();
     ppSlider();
     promo();
-    // scrolling();
+    scrolling();
     spoiler();
     top();
     portfolio();

@@ -23,7 +23,7 @@ function portfolio() {
         },
         {
             "id": 2,
-            "photoCount": 8,
+            "photoCount": 7,
             "name": "Квартира",
             "address": "Санкт-Петербург, проспект Железнодорожников, 111к1"
         }
