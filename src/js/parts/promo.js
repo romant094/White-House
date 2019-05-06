@@ -15,7 +15,7 @@ function promo() {
 
 
     document.addEventListener('click', (event) => {
-        if (!promoContainer.classList.contains('display-none')) {
+        if (!promoContainer.classList.contains('disabled')) {
             hideModal(promoContainer, promo, promoClose, event);
         }
     });
@@ -28,16 +28,16 @@ function promo() {
     }
 
     function showHideModal(modal) {
-        modal.classList.toggle('display-none');
+        modal.classList.toggle('disabled');
         document.body.classList.toggle('overflow-hidden');
     }
 
     function hideModal(modalContainer, modalContent, closeButton, event) {
         let t = event.target;
-        if (t.tagName == 'I') {
+        if (t.tagName === 'I') {
             t = t.parentNode;
         }
-        if ((t == modalContainer || t == closeButton) && t != modalContent) {
+        if ((t === modalContainer || t === closeButton) && t !== modalContent) {
             showHideModal(modalContainer);
         }
     }

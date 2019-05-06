@@ -87,6 +87,10 @@ body {
     }
 }
 
+.mx-auto{
+  margin: 0 auto;
+}
+
 .btn {
     display: block;
     color: @green;
@@ -100,6 +104,11 @@ body {
     padding: 11px 35px;
     cursor: pointer;
     transition: all 0.5s;
+
+    &-small {
+      font-size: 12px;
+      padding: 3px 18px;
+    }
     
     &--blue {
         background-color: @blue-sky;
@@ -135,8 +144,6 @@ body {
             background-image: none;
         }
     }
-
-    &--small {}
 
     &--icon {
         padding: 9px 24px 9px 10px;
@@ -439,9 +446,8 @@ h3 {
 
     &__outer {
         max-width: 814px;
-        margin: 0 auto;
+        margin: 0 auto 35px;
         padding: 30px 125px;
-        margin-bottom: 35px;
         text-align: center;
     }
 
@@ -452,6 +458,34 @@ h3 {
     }
 }
 
+.price{
+  padding: 50px 0;
+  &__type{
+    box-shadow:0 0 10px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 0 10px 4px rgba(0,0,0,0.3);
+    -moz-box-shadow:0 0 10px 4px rgba(0,0,0,0.3);
+    padding: 20px;
+    text-align: center;
+    min-width: 250px;
+
+    h3{
+      margin-bottom: 10px;
+    }
+    h4{
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 860px){
+  .price{
+    &__type{
+      width: 90%;
+      margin: 0 auto 30px !important;
+    }
+  }
+}
 
 .feedback {
     background: url(../image/feedback-bg.png) no-repeat center top;
@@ -691,7 +725,6 @@ h3 {
         font-size: 18px;
         font-weight: 700;
         line-height: 52px;
-        font-weight: 700;
         a {
             color: #fff;
         }
@@ -1089,9 +1122,8 @@ h3 {
 
         &__outer {
             max-width: 814px;
-            margin: 0 auto;
+            margin: 0 auto 35px;
             padding: 30px 125px;
-            margin-bottom: 35px;
             text-align: center;
         }
 
